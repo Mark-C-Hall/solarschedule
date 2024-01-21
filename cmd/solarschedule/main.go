@@ -1,13 +1,21 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"log"
+
+	"github.com/gin-gonic/gin"
+	"github.com/mark-c-hall/solarschedule/internal/api"
+)
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	router := gin.Default()
+
+	// Setup Route
+	api.SetupRoutes(router)
+
+	// Start Server
+	err := router.Run(":8080")
+	if err != nil {
+		log.Fatalf("Error: %v\n", err)
+	}
 }
