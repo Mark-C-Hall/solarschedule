@@ -1,0 +1,48 @@
+# Binaries and Object files
+/bin/
+/obj/
+*.o
+*.a
+
+# Executables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below if you're using vendoring)
+# /vendor/
+
+# Dependency files
+go.sum
+
+# Configuration files that may contain sensitive information
+*.conf
+*.yaml
+*.yml
+
+# IDE and editor files
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build artifacts
+/dist
+/build
